@@ -1,0 +1,24 @@
+Bootstrap: docker
+From: continuumio/miniconda3:4.6.14
+
+%labels
+    MAINTAINER Zelia Bontemps <zelia.bontemps@imbim.uu.se>
+    DESCRIPTION Singularity image containing all requirements for the PanGenome pipeline
+    VERSION 0.1
+
+%environment
+    export PATH=/opt/conda/envs/pangenome/bin:${PATH}
+
+%files
+    environment.yml /
+    
+%post
+    /opt/conda/bin/conda env create -f /environment.yml
+    /opt/conda/bin/conda clean -a
+   
+%runscript
+    source /opt/conda/etc/profile.d/conda.sh
+    exec /opt/conda/envs/pangenome/bin/"$@"
+
+%test
+/opt/conda/envs/pangenome/bin/prokka -V
