@@ -34,7 +34,8 @@ include { DIAMOND                        } from '../modules/local/diamond'
 include { PANGENOME                      } from '../modules/local/roary'
 include { PLOT                           } from '../modules/local/plot'
 include { TREE                           } from '../modules/local/tree'
-include { STATS                          } from '../modules/local/stats'
+include { GWAS                           } from '../modules/local/scoary'
+//include { STATS                          } from '../modules/local/stats'
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
