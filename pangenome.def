@@ -13,12 +13,8 @@ From: continuumio/miniconda3:4.6.14
     /opt/conda/bin/conda config --add channels defaults
     /opt/conda/bin/conda config --add channels conda-forge
     /opt/conda/bin/conda config --add channels bioconda
-<<<<<<< HEAD
-    /opt/conda/bin/conda create -n pangenome seqtk diamond fastree prokka iqtree roary
-=======
     /opt/conda/bin/conda install mamba
-    /opt/conda/bin/mamba create -n sieve seqtk diamond fastree prokka iqtree roary
->>>>>>> 82c217e (Roary installation with mamba)
+    /opt/conda/bin/mamba create -n pangenome seqtk diamond fastree prokka iqtree roary
    
 %runscript
     source /opt/conda/etc/profile.d/conda.sh
